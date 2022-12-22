@@ -1,0 +1,22 @@
+.card-deck{
+    display: flex;
+    flex-direction: column;
+}
+  .title {
+    background-color: white;
+    padding:30px 40px 30px 20px;
+    background: rgba(256, 256, 256, 0.5);
+    display:inline-block;
+    font-family:Orbitron;
+  }
+  
+  @media screen and (min-width: 576px) {
+  .title h1 {
+      font-size:4rem;
+  }
+  .title p {
+    font-size:2rem;
+  }
+  }
+  
+  

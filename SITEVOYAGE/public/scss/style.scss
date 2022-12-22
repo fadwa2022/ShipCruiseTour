@@ -1,0 +1,181 @@
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$font-secondary: 'Playfair Display', serif;
+
+$primary: #afa939;
+
+body{
+	font-family: $font-primary;
+	font-size: 14px;
+	line-height: 1.8;
+	font-weight: normal;
+	color: lighten($black,60%);
+}
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+button {
+	transition: .3s all ease;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+}
+
+
+
+.ftco-no-pt{
+	padding-top: 0;
+}
+.ftco-no-pb{
+	padding-bottom: 0;
+}
+//HEADING SECTION
+.heading-section{
+	font-size: 28px;
+	color: $black;
+}
+
+//COVER BG
+.img,
+.user-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+//OWL CAROUSEL
+.owl-carousel {
+	position: relative;
+	.owl-stage-outer{
+		padding-top: 1.5em;
+		position: relative;
+	}
+	.owl-item {
+		opacity: 1;
+		&.active {
+			opacity: 1;
+		}
+	}
+	
+	.owl-nav {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			transform: translateY(-50%);
+			margin-top: -10px;
+			color: rgba(0,0,0,.2) !important;
+			@include transition(.7s);
+			span {
+				&:before {
+					font-size: 16px;
+					@include transition(.3s);
+				}
+			}
+			opacity: 1;
+			&:hover{
+				span{
+					&:before{
+						color: $primary;
+					}
+				}
+			}
+		}
+		.owl-prev {
+			right: 0;
+			margin-right: 20px;
+
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+	.owl-dots {
+		text-align: center;
+		margin-top: 10px;
+		.owl-dot {
+			width: 10px;
+			height: 10px;
+			margin: 5px;
+			border-radius: 50%;
+			background: rgba(0,0,0,.1);
+			position: relative;
+			&:hover, &:focus{
+				outline: none !important;
+			}
+			&.active {
+				background: $primary;
+			}
+		}
+	}
+} 
+
+.owl-carousel.owl-drag .owl-item {
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+
+.testimony-wrap{
+	display: block;
+	position: relative;
+	padding: 30px 20px;
+	// background: rgba(0,0,0,.05);
+	border: 1px solid rgba(0,0,0,.03);
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 5px 21px -14px rgba(0,0,0,0.14);
+	-moz-box-shadow: 0px 5px 21px -14px rgba(0,0,0,0.14);
+	box-shadow: 0px 5px 21px -14px rgba(0,0,0,0.14);
+	.user-img{
+		width: 90px;
+		height: 90px;
+		border-radius: (50%);
+		position: relative;
+		border: 4px solid $white;
+	}
+	.text{
+		width: calc(100% - 90px);
+		position: relative;
+	}
+	.quote{
+		position: absolute;
+		top: -65px;
+		left: 25px;
+		opacity: 1;
+		i{
+			font-size: 40px;
+			color: $primary;
+		}
+	}
+	.name{
+		font-weight: 500;
+		font-size: 16px;
+		margin-bottom: 0;
+		color: $black;
+	}
+	.position{
+		font-size: 13px;
+		color: $primary;
+	}
+}
+

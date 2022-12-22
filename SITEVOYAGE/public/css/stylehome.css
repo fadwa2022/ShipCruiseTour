@@ -1,0 +1,43 @@
+video{
+    border: none;
+    width: 100%;
+    margin-bottom: -1em;
+}
+.carousel-caption{
+    bottom: 17rem !important;
+}
+#text{
+    font-size: 3em;
+}
+#et{
+    font-size: 3.3em;
+}
+#btn1{
+    border-color: rgb(97, 156, 234);
+    background: linear-gradient(#60a1f7, #b1ddf8);
+    width: 23%;
+    height: 3em;
+    margin-top: 4%;
+    box-shadow: 12px 12px 2px 1px rgba(96, 174, 248, 0.2);
+}
+#btn1:hover{
+    height: 3.1em;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+@media only screen and (max-width: 1000px) {
+  #carouselVideoExample{
+    margin-top:32%;
+  }
+  #text {
+    font-size: 1em;
+}
+.carousel-caption{
+    bottom: 2rem !important;
+}
+#btn1{
+    width: 44%;
+    font-size: 13px;
+
+}
+  }
