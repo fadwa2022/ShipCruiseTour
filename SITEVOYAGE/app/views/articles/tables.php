@@ -37,7 +37,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin<sup>fadwa</sup></div>
+                <div class="sidebar-brand-text mx-3">Admin<sup><?php echo  $_SESSION['user_name'] ?></sup></div>
             </a>
 
             <!-- Divider -->
@@ -49,13 +49,9 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
-            <!-- Divider -->
+    <!-- Divider -->
             <hr class="sidebar-divider">
-
-
-
-        </ul>
+     </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -87,141 +83,10 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 larg"><?php echo  $_SESSION['user_name'] ?></span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -244,25 +109,21 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <?php flash('message'); ?>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg>
-Croisiéres</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"> <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Croisiéres</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -292,31 +153,34 @@ Croisiéres</h6>
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                    <?php foreach ($data['Croisieres'] as  $Croisieres) : ?>
 
                                         <tr>
-                                            <?php foreach ($data['Croisieres'] as  $Croisieres) : ?>
-
-                                                <td> <?php echo  $Croisieres->Image; ?></td>
+                                                <td> <img src="<?php echo URLROOT; ?>/images/<?php echo  $Croisieres->Image; ?>" alt="" style="width: 5em;" > </td>
                                                 <td> <?php echo  $Croisieres->Port_dep; ?></td>
                                                 <td> <?php echo  $Croisieres->Port_Pause; ?></td>
                                                 <td> <?php echo  $Croisieres->Port_Finale; ?></td>
                                                 <td> <?php echo  $Croisieres->prix_croisiere; ?></td>
-                                                <td> <?php echo  $Croisieres->ID_navire; ?></td>
+                                                <td> <?php echo  $Croisieres->ID_navire ;?></td>
                                                 <td> <?php echo  $Croisieres->nbr_nuits; ?></td>
                                                 <td> <?php echo  $Croisieres->Date_dep; ?></td>
-                                            <?php endforeach; ?>
+                                                <!-- supp -->
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deletecroisiere/<?php echo $Croisieres->ID_croisiere ; ?>" class="btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <!-- edit -->
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/addcroisiere/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                    
 
-                                        </tr>
+                                        </tr> 
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Navires</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Navires</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -337,25 +201,23 @@ Croisiéres</h6>
                                     </tfoot>
                                     <tbody>
                                     <?php foreach ($data['navires'] as $navires) : ?>
-
                                         <tr>
-
-                                                <th><?php echo $navires->Nom_navire; ?></th>
-                                                <th><?php echo $navires->nbr_chambre; ?></th>
-                                                <th><?php echo $navires->nbr_place; ?></th>
+                                                <td><?php echo $navires->Nom_navire; ?></td>
+                                                <td><?php echo $navires->nbr_chambre; ?></td>
+                                                <td><?php echo $navires->nbr_voyageur; ?></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deletenavire/<?php echo  $navires->ID_navire; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editnavire/<?php echo  $navires->ID_navire; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>                                    
                                         </tr>
                                         <?php endforeach; ?>
-
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Portes</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Portes</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -364,7 +226,6 @@ Croisiéres</h6>
                                         <tr>
                                             <th>Nom Port</th>
                                             <th>Pays</th>
-
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -375,14 +236,13 @@ Croisiéres</h6>
                                     </tfoot>
                                     <tbody>
                                     <?php foreach ($data['ports'] as $ports) : ?>
-
                                         <tr>
-
-                                                <th><?php echo $ports->Nom_port; ?></th>
-                                                <th><?php echo $ports->Pays; ?></th>
+                                                <td><?php echo $ports->Nom_porte; ?></td>
+                                                <td><?php echo $ports->Pays; ?></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deleteport/<?php echo $ports->ID_port; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editport/<?php echo $ports->ID_port; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
                                         </tr>
                                         <?php endforeach; ?>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -392,7 +252,7 @@ Croisiéres</h6>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Chambres</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Chambres</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -415,15 +275,14 @@ Croisiéres</h6>
                                     </tfoot>
                                     <tbody>
                                     <?php foreach ($data['chambre'] as $chambre) : ?>
-
                                         <tr>
-
-                                                <th><?php echo $chambre->numero_chambre; ?></th>
-                                                <th><?php echo $chambre->ID_navire; ?></th>
-                                                <th><?php echo $chambre->ID_type; ?></th>
-                                                <th><?php echo $chambre->Prix; ?></th>
-
-                                        </tr>
+                                                <td><?php echo $chambre->numero_chambre; ?></td>
+                                                <td><?php echo $chambre->ID_navire; ?></td>
+                                                <td><?php echo $chambre->ID_type; ?></td>
+                                                <td><?php echo $chambre->Prix; ?></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deletechambre/<?php echo $chambre->ID_chambre; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editchambre/<?php echo $chambre->ID_chambre; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                         </tr>
                                         <?php endforeach; ?>
 
                                     </tbody>
@@ -435,7 +294,7 @@ Croisiéres</h6>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Résèrvations</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Résèrvations</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -462,13 +321,13 @@ Croisiéres</h6>
 
                                         <tr>
 
-                                                <th><?php echo $reservation->ID_user; ?></th>
-                                                <th><?php echo $reservation->ID_croisiere; ?></th>
-                                                <th><?php echo $reservation->date_reservation; ?></th>
-                                                <th><?php echo $reservation->Prix_reservation; ?></th>
-                                                <br>
-
-                                           
+                                                <td><?php echo $reservation->ID_Reservation; ?></td>
+                                                <td><?php echo $reservation->ID_croisiere; ?></td>
+                                                <td><?php echo $reservation->date_reservation; ?></td>
+                                                <td><?php echo $reservation->Prix_reservation; ?></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deleteReservation/<?php echo $reservation->ID_Reservation; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editReservation/<?php echo $reservation->ID_Reservation; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                                                  
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -487,7 +346,7 @@ Croisiéres</h6>
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy;Fadwa</span>
                     </div>
                 </div>
             </footer>

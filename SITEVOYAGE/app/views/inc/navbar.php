@@ -67,7 +67,7 @@
       <a class="nav-item nav-link active" href="<?php echo URLROOT; ?>/pages/index">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/croisieres">Croisières</a>
       <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/">Contact Us</a>
-      <?php if(isset($_SESSION['user_id'])) : ?>
+      <?php if(isset($_SESSION['ID_user'])) : ?>
         <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
       <?php else : ?>
         <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>

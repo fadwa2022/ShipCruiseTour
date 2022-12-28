@@ -1,9 +1,9 @@
 <?php require  APPROOT . '/views/inc/header.php'; ?>
 
 <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/stylelogine.css">
-<div class="img" style="background-image: url('<?php echo URLROOT; ?>/images/pedro-monteiro-HfIex7qwTlI-unsplash.jpg');">
+<div class="img" style="background-image: url('<?php echo URLROOT; ?>/images/datingscout-bmK_HnYK-yA-unsplash.jpg');">
 	<section class="ftco-section">
-		<div class="container " style="    padding: 2%;" >
+		<div class="container " style="padding: 2%;" >
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
 					<h2 class="heading-section">Login</h2>
@@ -27,7 +27,7 @@
 	            </div>
 	            <div class="form-group d-md-flex">
 	            	<div class="w-50">
-		            	<label class="checkbox-wrap checkbox-primary">Remember Me
+		            	<label class="checkbox-wrap checkbox-primary" style="color: #fff">Remember Me
 									  <input type="checkbox" checked>
 									  <span class="checkmark"></span>
 									</label>
@@ -37,7 +37,7 @@
 								</div>
 	            </div>
 	          </form>
-	          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+	          <p class="w-100 text-center" style="color: #fff">&mdash; Or Sign In With &mdash;</p>
 	          <div class="social d-flex text-center">
 	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
 	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>

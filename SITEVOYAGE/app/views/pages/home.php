@@ -2,6 +2,13 @@
 <link rel="stylesheet" href= "<?php echo URLROOT.'/css/stylearticle.css'?>">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
 <link href="<?php echo URLROOT; ?>/css/main.css" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo URLROOT; ?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/owl.theme.default.min.css">
+    <style>
+            .owl-carousel .owl-dots .owl-dot.active {
+      background: #0d6efd !important;
+  }
+    </style>
 <!-- Background image -->
 <div class="p-5 text-center bg-image" id="bg-images" style="background-image: url('<?php echo URLROOT; ?>/images/peter-hansen-MeGmdPNe36w-unsplash.jpg');
     height: 400px;
@@ -74,7 +81,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="<?php echo URLROOT; ?>/images/pedro-monteiro-HfIex7qwTlI-unsplash.jpg" alt="card image"></p>
                                     <h4 class="card-title">Indonesia, Jakarta</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p class="card-text" style="color: #323030;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                                     <a href="#" class="btn btn-primary btn-sm">1779.99$</a>
                                 </div>
                             </div>
@@ -83,7 +90,7 @@
                             <div class="card">
                                 <div class="card-body text-center mt-4">
                                     <h4 class="card-title">Malisia,bali</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p class="card-text" style="color: #323030;" style="color: #323030;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -122,7 +129,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="<?php echo URLROOT; ?>/images/datingscout-bmK_HnYK-yA-unsplash.jpg" alt="card image"></p>
                                     <h4 class="card-title">Malisia,bali</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p class="card-text" style="color: #323030;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                                     <a href="#" class="btn btn-primary btn-sm">1888.99$</a>
                                 </div>
                             </div>
@@ -131,7 +138,7 @@
                             <div class="card">
                                 <div class="card-body text-center mt-4">
                                     <h4 class="card-title">Malisia,bali</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p class="card-text" style="color: #323030;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -170,7 +177,7 @@
                                 <div class="card-body text-center">
                                     <p><img class=" img-fluid" src="<?php echo URLROOT; ?>/images/jorge-rosal-wUQkpKkRhOs-unsplash.jpg" alt="card image"></p>
                                     <h4 class="card-title">Maldives, Malé</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p class="card-text" style="color: #323030;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                                     <a href="#" class="btn btn-primary btn-sm">2000.00$</i></a>
                                 </div>
                             </div>
@@ -179,7 +186,7 @@
                             <div class="card">
                                 <div class="card-body text-center mt-4">
                                     <h4 class="card-title">Maldives, Malé</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p class="card-text" style="color: #323030;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -225,12 +232,12 @@
                             <div class="user-img" style="background-image: url('<?php echo URLROOT; ?>/images/pexels-cottonbro-studio-4911140.jpg')">
                             </div>
                             <div class="text pl-4">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="ion-ios-quote"></i>
+                                <span class="quote d-flex align-items-center justify-content-center" >
+                                    <i class="ion-ios-quote" style=" color: #0d6efd !important;"></i>
                                 </span>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                 <p class="name">Racky Henderson</p>
-                                <span class="position">Indonesia, Jakarta</span>
+                                <span class="position" style=" color: #0d6efd !important;">Indonesia, Jakarta</span>
                             </div>
                         </div>
                     </div>
@@ -239,12 +246,12 @@
                             <div class="user-img" style="background-image: url('<?php echo URLROOT; ?>/images/minh-pham--o4PpHE9uG0-unsplash.jpg')">
                             </div>
                             <div class="text pl-4">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="ion-ios-quote"></i>
+                                <span class="quote d-flex align-items-center justify-content-center" >
+                                    <i class="ion-ios-quote" style=" color: #0d6efd !important;"></i>
                                 </span>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                 <p class="name">Henry Dee</p>
-                                <span class="position">Maldives</span>
+                                <span class="position" style=" color: #0d6efd !important;">Maldives</span>
                             </div>
                         </div>
                     </div>
@@ -254,12 +261,12 @@
                             <div class="user-img" style="background-image: url('<?php echo URLROOT; ?>/images/ben-o-bro-ZbWSt_Hz0-I-unsplash.jpg')">
                             </div>
                             <div class="text pl-4">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="ion-ios-quote"></i>
+                                <span class="quote d-flex align-items-center justify-content-center" >
+                                    <i class="ion-ios-quote" style=" color: #0d6efd !important;"></i>
                                 </span>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                 <p class="name">Rodel Golez</p>
-                                <span class="position">Maldives,Bali</span>
+                                <span class="position" style=" color: #0d6efd !important;">Maldives,Bali</span>
                             </div>
                         </div>
                     </div>
@@ -268,12 +275,12 @@
                             <div class="user-img" style="background-image: url('<?php echo URLROOT; ?>/images/jorge-rosal-wUQkpKkRhOs-unsplash.jpg')">
                             </div>
                             <div class="text pl-4">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="ion-ios-quote"></i>
+                                <span class="quote d-flex align-items-center justify-content-center" >
+                                    <i class="ion-ios-quote" style=" color: #0d6efd !important;"></i>
                                 </span>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                 <p class="name">Ken Bosh</p>
-                                <span class="position"> Hawaii</span>
+                                <span class="position" style=" color: #0d6efd !important;"> Hawaii</span>
                             </div>
                         </div>
                     </div>
@@ -317,7 +324,7 @@
                 <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
             </div>
         </div>
-        <button type="button" class="btn btn-info btn-rounded w-50 m-auto p-3"> <a href="<?php echo URLROOT; ?>/pages/croisieres"  style=" text-decoration: none; color=#fff">Toutes Nos Destinations</a> </button>
+        <button type="button" class="btn btn-info btn-rounded w-50 mt-5 p-3" style="margin-left: 26%;"> <a href="<?php echo URLROOT; ?>/pages/croisieres"  style=" text-decoration: none; color=#fff;">Toutes Nos Destinations</a> </button>
 
     </div>
 </div>
@@ -328,7 +335,7 @@
             <div class="col-md-12">
                 <div class="wrapper p-5">
                     <div class="row no-gutters" data-aos="zoom-in-down">
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                             <div class="contact-wrap w-100 p-4">
                                 <h3 class="mb-4" >Contact Us</h3>
                                 <div id="form-message-warning" class="mb-4"></div>
@@ -368,12 +375,12 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-md-5 d-flex align-items-stretch">
+                        <div class="col-md-5 d-flex align-items-stretch " style="margin-left: 7%;">
                             <div class="info-wrap w-100 p-5 img" style="     border-radius: 30%;background-image: url(' <?php echo URLROOT; ?>/images/pexels-bruno-castelli-1838680.jpg');">
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-5 mt-2">
+                    <div class="row mb-5 mt-5">
                         <div class="col-md-3">
                             <div class="dbox w-100 text-center">
                                 <div class="icon d-flex align-items-center justify-content-center">
@@ -444,4 +451,9 @@
         itemSelectText: '',
     });
 </script>
+<script src="<?php echo URLROOT; ?>/js/jquery.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/js/popper.js"></script>
+    <script src="<?php echo URLROOT; ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/js/owl.carousel.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/js/main.js"></script>
 <?php require  APPROOT . '/views/inc/footer.php'; ?>

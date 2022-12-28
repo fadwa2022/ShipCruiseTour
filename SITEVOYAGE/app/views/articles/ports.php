@@ -1,3 +1,4 @@
+<?php require APPROOT . '/views/inc/header.php';?>
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
 <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/stylearticle.css">
 
@@ -76,31 +77,18 @@
             <h6>Nos multiples croisières en mer nous ont permis de sélectionner pour vous les destinations de rêve et les meilleurs partenaires pour louer votre voilier ou catamaran et vous donner tous les conseils pour profiter ainsi de vos vacances d’exceptio</h6>
         </div>
         <!-- ferst -->
+        <?php foreach ($data['Ports'] as  $Ports) : ?>
         <div class="col-md-4" data-aos="zoom-in">
             <hr>
-            <div class="profile-card-2"><img src="<?php echo URLROOT; ?>/images/adam-gonzales-A2MkCqYrSUw-unsplash.jpg" class="img img-responsive" style=" margin-top:0%;">
-                <div class="profile-name">Indonésie</div>
-                <div class="profile-username">1200.99$</div>
-            </div>
-            <!-- second -->
-        </div>
-        <!-- 2 -->
-        <div class="col-md-4" data-aos="zoom-in">
-            <hr>
-            <div class="profile-card-2"><img src="<?php echo URLROOT; ?>/images/nellia-kurme-0kVnoA6Thgs-unsplash.jpg" class="img img-responsive" style=" margin-top:0%;">
-                <div class="profile-name">Italie</div>
-                <div class="profile-username" >1779.99$</div>
+            <div class="profile-card-2"><img src="<?php echo URLROOT; ?>/images/<?php echo  $Ports->image; ?>" class="img img-responsive" style=" margin-top:0%;">
+                <div class="profile-name" style="    font-size: 52px;"> <?php echo  $Ports->Nom_porte; ?> <em style="    font-size: 20px;"> <?php echo  $Ports->Pays; ?></em></div>
             </div>
         </div>
-        <!-- 3 -->
-        <div class="col-md-4" data-aos="zoom-in">
-            <hr>
-            <div class="profile-card-2">
-                <img src="<?php echo URLROOT; ?>/images/pexels-pixabay-237272.jpg" class="img img-responsive" style=" margin-top:0%;">
-                <div class="profile-name">Turquie</div>
-                <div class="profile-username">1999.99$</div>
-            </div>
-        </div>
+        <?php endforeach; ?>
+
+       
 
     </div>
 </div>
+
+<?php require APPROOT . '/views/inc/footer.php'; ?>

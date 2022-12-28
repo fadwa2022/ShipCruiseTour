@@ -1,7 +1,7 @@
 <?php
 session_start();
 // flash message helper
-function flash($name = '', $message = '', $class = 'alert alert-warning'){
+function flash($name = '', $message = '', $class = 'alert alert-primary'){
     if(!empty($name)){
       if(!empty($message) && empty($_SESSION[$name])){
         if(!empty($_SESSION[$name])){
@@ -24,7 +24,7 @@ function flash($name = '', $message = '', $class = 'alert alert-warning'){
   }
  function isLoggdIn()
 {
-    if (isset($_SESSION['user_id'])) {
+    if (isset($_SESSION['ID_user'])) {
         return true;
     } else {
         return false;
