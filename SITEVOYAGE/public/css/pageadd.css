@@ -253,11 +253,13 @@
   }
   
   .btn--green {
-    background: #57b846;
+    background: #0d6efd;
+    
   }
   
   .btn--green:hover {
-    background: #4dae3c;
+    background: #75aaff;
+
   }
   
   /* ==========================================================================
@@ -484,7 +486,7 @@
   }
   
   .card-3 {
-    background: #000;
+    background:#010405b0;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;

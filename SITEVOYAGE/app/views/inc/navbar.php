@@ -65,9 +65,14 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style=" margin-left: 20%; font-size: 18px;">
     <div class="navbar-nav" style="width: 43em !important; justify-content: space-between; display: flex;">
       <a class="nav-item nav-link active" href="<?php echo URLROOT; ?>/pages/index">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/croisieres">Croisières</a>
+      <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/ports">Distinations</a>
       <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/">Contact Us</a>
       <?php if(isset($_SESSION['ID_user'])) : ?>
+        <?php if($_SESSION['Role'] == 1) : ?>
+
+        <a  class="nav-item nav-link"  href="<?php echo URLROOT; ?>/articles/dashbord">gestion</a>
+        <?php endif;?>
+        <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/reservation">Reservation</a>
         <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
       <?php else : ?>
         <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>

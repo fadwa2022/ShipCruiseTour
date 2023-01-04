@@ -12,31 +12,84 @@
 <link href="<?php echo URLROOT; ?>/css/pageadd.css" rel="stylesheet" media="all">
 
 <body>
-    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+    <div class="page-wrapper p-t-180 p-b-100 font-poppins" style="    background-image:url('<?php echo URLROOT; ?>/images/pedro-monteiro-HfIex7qwTlI-unsplash.jpg');    background-size: cover;
+;
+">
         <div class="wrapper wrapper--w780">
             <div class="card card-3">
-                <div class="card-heading" style="background-image: url('<?php echo URLROOT; ?>/images/alevision-co-JDfo4MFHvqY-unsplash.jpg'); background-size: cover;"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
+                    <h2 class="title">Ajouter Une Croisiere</h2>
                     <form action="<?php echo URLROOT; ?>/Articles/addcroisieres/" method="POST" enctype="multipart/form-data">
+
                         <div class="input-group">
-                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['name_prod_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['name_prod']; ?>"></label>
-                            <div class="invalid-feedback "><?php echo $data['name_prod_err']; ?></div>
-                            <input type="text" class="input--style-3" name="name" id="exampleFormControlInput1" placeholder="Product name">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['ID_navire_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['ID_navire']; ?>" style="color: #fff;" >Choisire Une Navire</label>
+                            <div class="invalid-feedback "><?php echo $data['ID_navire_err']; ?></div>
+                            <select  name='ID_navire' class="input--style-3" class="selectpicker" data-live-search="true" style="    width: 100%;">
+                                <?php foreach ($data['Navires'] as  $Navires) : ?>
+                                    <option value="<?php echo $Navires->ID_navire; ?>" data-tokens="ketchup mustard"><?php echo $Navires->Nom_navire; ?></option>
+                                <?php endforeach; ?>
+
+                            </select>
+                        </div>
+                        <!-- prix croi -->
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['prix_croisiere_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['prix_croisiere']; ?>" ></label>
+                            <div class="invalid-feedback "><?php echo $data['prix_croisiere_err']; ?></div>
+                            <input type="number" class="input--style-3" name="prix_croisiere" id="exampleFormControlInput1" placeholder="Prix croisiere" min=1>
+                        </div>
+                        <!-- image -->
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['Image_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['Image']; ?>" style="color: #fff;" >Choisire L'image du Navire </label>
+                            <div class="invalid-feedback "><?php echo $data['Image_err']; ?></div>
+                            <input type="file" class="input--style-3" name="Image" id="exampleFormControlInput1" placeholder="Prix croisiere">
+                        </div>
+                        <!-- nuits -->
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['nbr_nuits_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['nbr_nuits']; ?>"style="color: #fff;" style="color: #fff;" ></label>
+                            <div class="invalid-feedback "><?php echo $data['nbr_nuits_err']; ?></div>
+                            <input type="number" class="input--style-3" name="nbr_nuits" id="exampleFormControlInput1" placeholder="Nombre Des Nuits" min=1>
                         </div>
 
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['Port_dep_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['Port_dep']; ?>" style="color: #fff;" >Choisire Le Premiere Port</label>
+                            <div class="invalid-feedback "><?php echo $data['Port_dep_err']; ?></div>
+                           <select name='Port_dep' class="input--style-3" class="selectpicker" data-live-search="true" style="    width: 100%;">
+                                <?php foreach ($data['ports'] as   $ports) : ?>
+                                    <option value="<?php echo  $ports->Nom_port; ?>"><?php echo  $ports->Nom_port; ?></option>
+                                <?php endforeach; ?>
 
+                            </select>
+                        </div>
 
-                        <!-- choisire une navire -->
-                        <select class="input--style-3" class="selectpicker" data-live-search="true">
-                        <?php foreach ($data['Navires'] as  $Navires) : ?>
-                            <option data-tokens="ketchup mustard"><?php echo $Navires->Nom_navire; ?></option>
-                       <?php endforeach ;?>
-                        </select>
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['Port_Pause_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['Port_Pause']; ?>"style="color: #fff;" >Choisire Le Deuxieme  Port</label>
+                            <div class="invalid-feedback "><?php echo $data['Port_Pause_err']; ?></div>
+                            <select name='Port_Pause' class="input--style-3" class="selectpicker" data-live-search="true" style="    width: 100%;">
+                                <?php foreach ($data['ports'] as   $ports) : ?>
+                                    <option value="<?php echo  $ports->Nom_port; ?>"   data-tokens="ketchup mustard"><?php echo  $ports->Nom_port; ?></option>
+                                <?php endforeach; ?>
 
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['Port_Finale_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['Port_Finale']; ?>"style="color: #fff;" >Choisire Le Troisieme  Port </label>
+                            <div class="invalid-feedback "><?php echo $data['Port_Finale_err']; ?></div>
+                            <select  name='Port_Finale' class="input--style-3" class="selectpicker" data-live-search="true" style="    width: 100%;">
+                                <?php foreach ($data['ports'] as   $ports) : ?>
+                                    <option value="<?php echo  $ports->Nom_port; ?>"  data-tokens="ketchup mustard"><?php echo  $ports->Nom_port; ?></option>
+                                <?php endforeach; ?>
+
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="exampleFormControlInput1" class="form-label  <?php echo (!empty($data['Date_dep_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['Date_dep']; ?>"style="color: #fff;" >La Date De Départ </label>
+                            <div class="invalid-feedback "><?php echo $data['Date_dep_err']; ?></div>
+                            <input type="date" class="input--style-3" name="Date_dep" id="exampleFormControlInput1" placeholder="Prix croisiere">
+                        </div>
 
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                            <button class="btn btn--pill btn--green" type="submit" >Submit</button>
                         </div>
                     </form>
                 </div>
@@ -49,7 +102,7 @@
     <script src="<?php echo URLROOT; ?>/vendor/select2/select2.min.js"></script>
     <script src="<?php echo URLROOT; ?>/vendor/datepicker/moment.min.js"></script>
     <script src="<?php echo URLROOT; ?>/vendor/datepicker/daterangepicker.js"></script>
-
+ 
     <!-- Main JS-->
     <script src="<?php echo URLROOT; ?>/js/global.js"></script>
     <?php require  APPROOT . '/views/inc/footer.php'; ?>
