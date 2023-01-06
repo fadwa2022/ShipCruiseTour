@@ -1513,6 +1513,7 @@ span.flatpickr-weekday {
 }
 
 .s002 {
+
   display: flex;
       justify-content: center;
       align-items: center;
@@ -1520,6 +1521,7 @@ span.flatpickr-weekday {
 }
 
 .s002 form {
+  margin-top: 4%;
   width: 100%;
   max-width: 1190px;
 }
@@ -1534,7 +1536,6 @@ span.flatpickr-weekday {
 }
 
 .s002 form .inner-form {
-  background: rgba(0, 0, 0, 0.5);
 
   display: -ms-flexbox;
   display: flex;
@@ -1566,7 +1567,6 @@ span.flatpickr-weekday {
 }
 
 .s002 form .inner-form .input-field .icon-wrap svg {
-  fill: #555;
   width: 14px;
   height: 14px;
 }
@@ -1580,7 +1580,6 @@ span.flatpickr-weekday {
   width: 100%;
   padding: 10px 20px 10px 45px;
   font-size: 16px;
-  color: #555;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
 }

@@ -187,7 +187,12 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load",function(){
+        loader.style.display ="none";
+    })
+</script>
 <script src="<?php echo URLROOT; ?>/js/jquery.min.js"></script>
 <script src="<?php echo URLROOT; ?>/js/popper.js"></script>
 <script src="<?php echo URLROOT; ?>/js/owl.carousel.min.js"></script>

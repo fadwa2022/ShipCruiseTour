@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php';  ?>
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 overflow-scroll">
 <?php flash('message'); ?>
 <table class="table col-12  ">
   <caption> Your List of Reservations</caption>
@@ -29,7 +29,9 @@
       <td><?php echo  $reservation->ID_Reservation; ?></td>
       <td><?php echo  $reservation->date_reservation; ?></td>
       <td><?php echo  $reservation->Prix_reservation; ?></td>
+      <?php if(strtotime($reservation->Date_dep) > strtotime(date('y-m-d h:m:s'))) :?>
       <td><a href="<?php echo URLROOT; ?>/Pages/deletereservation/<?php echo $reservation->ID_Reservation ; ?>" class="btn btn-primary" >annulée</a></td>
+      <?php endif; ?>
     </tr>
     <?php endforeach; ?>
   </tbody>

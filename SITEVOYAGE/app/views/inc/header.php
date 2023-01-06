@@ -34,4 +34,21 @@
 </head>
 
 <body >
+<style>
+            .owl-carousel .owl-dots .owl-dot.active {
+      background: #0d6efd !important;}
+      #preloader{
+        background: #fff url("<?php echo URLROOT; ?>/images/Loading_2.gif") no-repeat center center;
+background-size: 10%;
+        height: 100vh;
+        width:100% ;
+        position: fixed;
+        z-index: 100;
+
+      }
+    </style>
+<div id="preloader">
+
+
+</div>
   <?php require APPROOT . '/views/inc/navbar.php' ?>

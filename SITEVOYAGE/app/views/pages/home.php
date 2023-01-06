@@ -1,69 +1,61 @@
+
 <?php require  APPROOT . '/views/inc/header.php'; ?>
 <link rel="stylesheet" href= "<?php echo URLROOT.'/css/stylearticle.css'?>">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
 <link href="<?php echo URLROOT; ?>/css/main.css" rel="stylesheet" />
 <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/owl.theme.default.min.css">
-    <style>
-            .owl-carousel .owl-dots .owl-dot.active {
-      background: #0d6efd !important;
-  }
-    </style>
+
+ 
 <!-- Background image -->
+
 <div class="p-5 text-center bg-image" id="bg-images" style="background-image: url('<?php echo URLROOT; ?>/images/peter-hansen-MeGmdPNe36w-unsplash.jpg');
     height: 400px;
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;">
-    <div class="mask ">
-        <div class="d-flex justify-content-center align-items-center ">
-            <div class="text-white">
-                <div class="s002">
-                    <form>
-                        <div class="inner-form">
-                            <div class="input-field first-wrap">
-                                <div class="icon-wrap">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
-                                    </svg>
-                                </div>
-                                <input id="search" type="text" placeholder="What are you looking for?" />
-                            </div>
-                            <div class="input-field first-wrap">
-                                <div class="icon-wrap">
-                                    <svg width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
-                                    </svg>
-                                </div>
-                                <input id="search" type="text" placeholder="What are you looking for?" />
-                            </div>
-                            <div class="input-field second-wrap">
-                                <div class="icon-wrap">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
-                                    </svg>
-                                </div>
-                                <input class="datepicker" id="depart" type="text" placeholder="29 Aug 2018" />
-                            </div>
-                            <div class="input-field third-wrap">
-                                <div class="icon-wrap">
-                                    <svg width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
-                                    </svg>
-                                </div>
-                                <input class="datepicker" id="return" type="text" placeholder="30 Aug 2018" />
-                            </div>
-
-                            <div class="input-field fifth-wrap">
-                                <button class="btn-search" type="button">SEARCH</button>
-                            </div>
-                        </div>
-                    </form>
+  <div class="mask "  data-aos="flip-up">
+    <div class="d-flex justify-content-center align-items-center ">
+      <div class="text-white">
+        <div class="s002">
+          <form method="post" action="<?= URLROOT ?>/Pages/filter/">
+            <div class="inner-form">
+              <div class="input-field first-wrap">
+                <div class="icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                  </svg>
                 </div>
-            </div>
+                <input id="search" name="port-depart" type="text" placeholder="What are you looking for?" />
+              </div>
+              <div class="input-field first-wrap">
+                <div class="icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                  </svg>
+                </div>
+                <input id="search" name="nom_navire" type="text" placeholder="What are you looking for?" />
+              </div>
+             
+              <div class="input-field third-wrap">
+                <div class="icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+                  </svg>
+                </div>
+                <input name="Date_dep" class="datepicker" id="return" type="date" placeholder="30 Aug 2018" />
+              </div>
 
+              <div class="input-field fifth-wrap">
+                <button class="btn-search" type="submit">SEARCH</button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
+
     </div>
+  </div>
 </div>
 <!-- Background image -->
 
@@ -324,7 +316,7 @@
                 <div class="profile-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
             </div>
         </div>
-        <button type="button" class="btn btn-info btn-rounded w-50 mt-5 p-3" style="margin-left: 26%;"> <a href="<?php echo URLROOT; ?>/pages/croisieres"  style=" text-decoration: none; color=#fff;">Toutes Nos Destinations</a> </button>
+        <button type="button" class="btn btn-info btn-rounded w-50 mt-5 p-3" style="margin-left: 26%;"> <a href="<?php echo URLROOT; ?>/pages/port/1"  style=" text-decoration: none; color=#fff;">Toutes Nos Destinations</a> </button>
 
     </div>
 </div>
@@ -376,7 +368,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 d-flex align-items-stretch " style="margin-left: 7%;">
-                            <div class="info-wrap w-100 p-5 img" style="     border-radius: 30%;background-image: url(' <?php echo URLROOT; ?>/images/pexels-bruno-castelli-1838680.jpg');">
+                            <div class="info-wrap w-100 p-5 img" style="     border-radius: 5%;background-image: url(' <?php echo URLROOT; ?>/images/pexels-bruno-castelli-1838680.jpg');">
                             </div>
                         </div>
                     </div>
@@ -451,6 +443,7 @@
         itemSelectText: '',
     });
 </script>
+
 <script src="<?php echo URLROOT; ?>/js/jquery.min.js"></script>
     <script src="<?php echo URLROOT; ?>/js/popper.js"></script>
     <script src="<?php echo URLROOT; ?>/js/bootstrap.min.js"></script>

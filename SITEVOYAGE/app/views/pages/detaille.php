@@ -1,3 +1,4 @@
+
 <?php require  APPROOT . '/views/inc/header.php';?>
 <link href="<?php echo URLROOT; ?>/css/main.css" rel="stylesheet" />
 <link href="<?php echo URLROOT; ?>/css/style.css" rel="stylesheet" />
@@ -165,15 +166,6 @@
   <div class="row justify-content-center ">
     <div class="col-xl-10">
       <div class="card shadow-lg  ">
-        <!-- <div class="row  mx-auto justify-content-center text-center">
-          <div class="col-12 mt-3 ">
-            <nav aria-label="breadcrumb" class="second1 ">
-              <button onclick="closePopup()" class=" btn btn-outline-primary breadcrumb-item font-weight-bold"><i class="fa fa-angle-double-right text-uppercase " aria-hidden="true"></i><a class="black-text text-uppercase" href="#"><span class="mr-md-3 mr-1">BACK</span></a></button>
-
-            </nav>
-          </div>
-        </div> -->
-
         <div class="row justify-content-around">
           <div class="col-md-5">
             <div class="card border-0">
@@ -250,7 +242,7 @@
                 </div>
               </div>
             </div>
-            <form action="<?php echo URLROOT; ?>/Articles/addreservation/<?php echo $data['Croisieres']->ID_croisiere ; ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?php echo URLROOT; ?>/admin/addreservation/<?php echo $data['Croisieres']->ID_croisiere ; ?>" method="POST" enctype="multipart/form-data">
             <div class="row mb-md-5">
               <div class="col">
              <input  type="submit" name="prixreservation" id="affichprix" value="<?php echo $data['Croisieres']->prix_croisiere ;?>" class="btn  btn-lg btn-block  btn-primary ">

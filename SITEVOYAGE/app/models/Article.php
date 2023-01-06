@@ -301,13 +301,4 @@ class Article
     }
   
 
-    //  // Reservation
-
-    //  public function getReservationById($ID_Reservation)
-    //  {
-    //      $this->db->query('SELECT * FROM `reservation` WHERE ID_reservation = :ID_Reservation');
-    //      $this->db->bind(':ID_Reservation', $ID_Reservation);
-    //      $row = $this->db->single();
-    //      return $row;
-    //  }
 }

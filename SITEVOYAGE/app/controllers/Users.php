@@ -1,6 +1,6 @@
 <?php
 class Users extends Controller
-{
+{ public $userModel;
     public function __construct()
     {
         $this->userModel = $this->model('User');
@@ -159,7 +159,7 @@ class Users extends Controller
 
         if($_SESSION['Role'] == 1)  
         { 
-            redirect('articles/dashbord');
+            redirect('admin/index');
         }else{
             redirect('pages/index');
 

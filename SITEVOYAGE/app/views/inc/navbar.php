@@ -59,18 +59,24 @@
 
   <div class="site-logo">
     <a href="index.html" class="text-black"><span class="text-primary" style="font-size: 41px;">SAFARER</a>
-  </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  </div> 
+  <!-- <div class="site-logo">
+    <a href="index.html" class="text-black"><img src="<?php echo URLROOT; ?>/images/seafare.png" alt=""></a>
+  </div>  -->
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style=" margin-left: 20%; font-size: 18px;">
     <div class="navbar-nav" style="width: 43em !important; justify-content: space-between; display: flex;">
       <a class="nav-item nav-link active" href="<?php echo URLROOT; ?>/pages/index">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/ports">Distinations</a>
+      <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/port/1">Distinations</a>
+      <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/croisieres">Croisieres</a>
       <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/">Contact Us</a>
       <?php if(isset($_SESSION['ID_user'])) : ?>
         <?php if($_SESSION['Role'] == 1) : ?>
 
-        <a  class="nav-item nav-link"  href="<?php echo URLROOT; ?>/articles/dashbord">gestion</a>
+        <a  class="nav-item nav-link"  href="<?php echo URLROOT; ?>/admin/index">gestion</a>
         <?php endif;?>
         <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/pages/reservation">Reservation</a>
         <a class="nav-item nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>

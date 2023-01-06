@@ -7,7 +7,12 @@
     background-size: cover;
 }
 .mask{
-    margin-top: 13%;
+    margin-left: 8%;
+    height: 38%;
+    width: 86%;
+    margin-top: 6%;
+    background-color: white;
+    box-shadow: 10px 10px 10px 0 rgb(0 0 0 / 60%);
 }
 
 /* FontAwesome for working BootSnippet :> */
@@ -31,9 +36,8 @@
     border-color: #00547b;
 }
 
-
-
 section .section-title {
+    padding: 2%;
     text-align: center;
     color: #0a0b0b;
     margin-bottom: 50px;
@@ -305,9 +309,6 @@ a:focus {
 .profile-card-2:hover .profile-name {
     bottom: 80px;
 }
-
-
-
 
 
 

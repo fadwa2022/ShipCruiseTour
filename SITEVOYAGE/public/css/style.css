@@ -8166,8 +8166,7 @@ h1, h2, h3, h4, h5,
   font-weight: 400;
   font-family: "Poppins", Arial, sans-serif; }
 
-.ftco-section {
-  padding: 7em 0; }
+
 
 .ftco-no-pt {
   padding-top: 0; }
@@ -8289,3 +8288,11 @@ h1, h2, h3, h4, h5,
   .testimony-wrap .position {
     font-size: 13px;
     color: #188ff4; }
+.mask{
+  margin-left: 8%;
+  height: 38%;
+    width: 86%;
+    margin-top: 6%;
+    background-color: white;
+    box-shadow: 10px 10px 10px 0 rgb(0 0 0 / 60%);
+}
