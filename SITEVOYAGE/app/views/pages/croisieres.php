@@ -129,7 +129,7 @@
                     <h6 class="text-success">Free restauration</h6>
                     <div class="d-flex flex-column mt-4">
                       <a class="btn btn-primary btn-sm" href="<?php echo URLROOT; ?>/pages/detaille/<?php echo $Croisieres->ID_croisiere; ?>">Reserver </a>
-
+                   
                     </div>
                   </div>
                 </div>
