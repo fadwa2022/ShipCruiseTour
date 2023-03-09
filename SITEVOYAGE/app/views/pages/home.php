@@ -36,7 +36,7 @@
                 </div>
                 <input id="search" name="nom_navire" type="text" placeholder="What are you looking for?" />
               </div>
-             
+<!--              
               <div class="input-field third-wrap">
                 <div class="icon-wrap">
                   <svg width="24" height="24" viewBox="0 0 24 24">
@@ -44,7 +44,12 @@
                   </svg>
                 </div>
                 <input name="Date_dep" class="datepicker" id="return" type="date" placeholder="30 Aug 2018" />
-              </div>
+              </div> -->
+              <div class="input-field first-wrap">
+
+<input type="number" id="tentacles" name="Date_dep"
+min="1" max="12">
+</div>
 
               <div class="input-field fifth-wrap">
                 <button class="btn-search" type="submit">SEARCH</button>

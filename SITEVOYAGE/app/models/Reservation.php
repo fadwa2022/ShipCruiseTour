@@ -15,7 +15,7 @@ class Reservation
     }
    
     public function getoneReservation($ID_user){       
-        $this->db->query('SELECT c.nbr_nuits,c.Port_dep,c.Port_Pause,c.Port_Finale,c.Date_dep,r.ID_Reservation,r.date_reservation,r.Prix_reservation FROM croisiere c ,reservation r WHERE c.ID_croisiere = r.ID_croisiere && r.ID_user=:ID_user;');
+        $this->db->query('SELECT c.nbr_nuits,c.Date_dep,r.ID_Reservation,r.date_reservation,r.Prix_reservation FROM croisiere c ,reservation r WHERE c.ID_croisiere = r.ID_croisiere && r.ID_user=:ID_user;');
         $this->db->bind(':ID_user', $ID_user);
         $results = $this->db->resultSet();
 
@@ -53,7 +53,7 @@ class Reservation
  
     public function getReserationById($ID_Reservation)
     {
-        $this->db->query('SELECT c.ID_user,c.nbr_nuits,c.Port_dep,c.Port_Pause,c.Port_Finale,c.Date_dep,r.ID_Reservation,r.date_reservation,r.Prix_reservation FROM croisiere c ,reservation r  WHERE  `ID_reservation`=:ID_Reservation && r.ID_croisiere=c.ID_croisiere;');
+        $this->db->query('SELECT c.ID_user,c.nbr_nuits,c.Date_dep,r.ID_Reservation,r.date_reservation,r.Prix_reservation FROM croisiere c ,reservation r  WHERE  `ID_reservation`=:ID_Reservation && r.ID_croisiere=c.ID_croisiere;');
         $this->db->bind(':ID_Reservation', $ID_Reservation);
         $row = $this->db->single();
         return $row;

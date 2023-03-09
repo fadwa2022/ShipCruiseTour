@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,23 +24,6 @@
 
 <body id="page-top">
 
-<style>
-            .owl-carousel .owl-dots .owl-dot.active {
-      background: #0d6efd !important;}
-      #preloader{
-        background: #fff url("<?php echo URLROOT; ?>/images/Loading_2.gif") no-repeat center center;
-background-size: 10%;
-        height: 100vh;
-        width:100% ;
-        position: fixed;
-        z-index: 100;
-
-      }
-    </style>
-<div id="preloader">
-
-
-</div>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -61,13 +43,13 @@ background-size: 10%;
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo URLROOT; ?>/admin/dashbord">
+                <a class="nav-link" href="<?php echo URLROOT; ?>/articles/dashbord">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <!-- Divider -->
+    <!-- Divider -->
             <hr class="sidebar-divider">
-        </ul>
+     </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -139,10 +121,7 @@ background-size: 10%;
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"> <a href="<?php echo URLROOT; ?>/admin/addcroisieres"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)" />
-                                    </svg></a>Croisiéres</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"> <a href="<?php echo URLROOT; ?>/articles/addcroisieres"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Croisiéres</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -150,6 +129,9 @@ background-size: 10%;
                                     <thead>
                                         <tr>
                                             <th>image</th>
+                                            <th>Port Départ</th>
+                                            <th>Port Pause</th>
+                                            <th>Port Finale</th>
                                             <th>Prix</th>
                                             <th>Navire</th>
                                             <th>Nombre Nuits</th>
@@ -159,71 +141,43 @@ background-size: 10%;
                                     <tfoot>
                                         <tr>
                                             <th>image</th>
+                                            <th>Port Départ</th>
+                                            <th>Port Pause</th>
+                                            <th>Port Finale</th>
                                             <th>Prix</th>
                                             <th>Navire</th>
                                             <th>Nombre Nuits</th>
                                             <th>date de départ</th>
                                         </tr>
-
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($data['Croisieres'] as  $Croisieres) :   ?>
-                                            <tr>
-                                                <td> <img src="<?php echo URLROOT; ?>/images/<?php echo  $Croisieres->Image; ?>" alt="" style="width: 5em;"> </td>
-                                         
+                                    <?php foreach ($data['Croisieres'] as  $Croisieres) :   ?>
+                                        <tr>
+                                                <td> <img src="<?php echo URLROOT; ?>/images/<?php echo  $Croisieres->Image; ?>" alt="" style="width: 5em;" > </td>
+                                                <td> <?php echo  $Croisieres->Port_dep; ?></td>
+                                                <td> <?php echo  $Croisieres->Port_Pause; ?></td>
+                                                <td> <?php echo  $Croisieres->Port_Finale; ?></td>
                                                 <td> <?php echo  $Croisieres->prix_croisiere; ?></td>
-                                                <td> <?php echo  $Croisieres->Nom_navire; ?></td>
+                                                <td> <?php echo  $Croisieres->Nom_navire ;?></td>
                                                 <td> <?php echo  $Croisieres->nbr_nuits; ?></td>
                                                 <td> <?php echo  $Croisieres->Date_dep; ?></td>
                                                 <!-- supp -->
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/deletecroisiere/<?php echo $Croisieres->ID_croisiere; ?>" class="btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deletecroisiere/<?php echo $Croisieres->ID_croisiere ; ?>" class="btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
                                                 <!-- edit -->
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/portscr/<?php echo $Croisieres->ID_croisiere; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/updatecroisiere/<?php echo $Croisieres->ID_croisiere ; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                    
 
-
-                                            </tr>
+                                        </tr> 
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/1">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/2">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/3">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/4">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/5">5</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/6">6</a></li>
-
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
                     </div>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?php echo URLROOT; ?>/admin/addnavire"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)" />
-                                    </svg></a>Navires</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?php echo URLROOT; ?>/articles/addnavire"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Navires</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -243,20 +197,14 @@ background-size: 10%;
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($data['navires'] as $navires) : ?>
-                                            <tr>
+                                    <?php foreach ($data['navires'] as $navires) : ?>
+                                        <tr>
                                                 <td><?php echo $navires->Nom_navire; ?></td>
                                                 <td><?php echo $navires->nbr_chambre; ?></td>
                                                 <td><?php echo $navires->nbr_place; ?></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/deletenavire/<?php echo  $navires->ID_navire; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/editnavire/<?php echo  $navires->ID_navire; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                            </tr>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deletenavire/<?php echo  $navires->ID_navire; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editnavire/<?php echo  $navires->ID_navire; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>                                    
+                                        </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
@@ -266,17 +214,14 @@ background-size: 10%;
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?php echo URLROOT; ?>/admin/addports"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)" />
-                                    </svg></a>Portes</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?php echo URLROOT; ?>/articles/addports"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Portes</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>image</th>
+                                        <th>image</th>
 
                                             <th>Nom Port</th>
                                             <th>Pays</th>
@@ -284,53 +229,24 @@ background-size: 10%;
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>image</th>
+                                        <th>image</th>
 
                                             <th>Nom Port</th>
                                             <th>Pays</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($data['ports'] as $ports) : ?>
-                                            <tr>
-                                                <td> <img src="<?php echo URLROOT; ?>/images/<?php echo  $ports->image; ?>" alt="" style="width: 5em;"> </td>
+                                    <?php foreach ($data['ports'] as $ports) : ?>
+                                        <tr>
+                                                <td> <img src="<?php echo URLROOT; ?>/images/<?php echo  $ports->image; ?>" alt="" style="width: 5em;" > </td>
                                                 <td><?php echo $ports->Nom_port; ?></td>
                                                 <td><?php echo $ports->Pays; ?></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/deleteport/<?php echo $ports->ID_port; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/editport/<?php echo $ports->Pays; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                            </tr>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deleteport/<?php echo $ports->ID_port; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editport/<?php echo $ports->Pays; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                        </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/1">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/2">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/3">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/4">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/5">5</a></li>
-                                        <li class="page-item"><a class="page-link" href="<?= URLROOT; ?>/admin/tables/6">6</a></li>
-
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
 
@@ -338,10 +254,7 @@ background-size: 10%;
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?php echo URLROOT; ?>/admin/addchambre"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)" />
-                                    </svg></a>Chambres</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?php echo URLROOT; ?>/articles/addchambre"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Chambres</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -361,20 +274,14 @@ background-size: 10%;
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($data['chambre'] as $chambre) : ?>
-                                            <tr>
+                                    <?php foreach ($data['chambre'] as $chambre) : ?>
+                                        <tr>
                                                 <td><?php echo $chambre->ID_chambre; ?></td>
                                                 <td><?php echo $chambre->Nom_navire; ?></td>
                                                 <td><?php echo $chambre->Nom_type; ?></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/deletechambre/<?php echo $chambre->ID_chambre; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/editchambre/<?php echo $chambre->ID_chambre; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                            </tr>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deletechambre/<?php echo $chambre->ID_chambre; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editchambre/<?php echo $chambre->ID_chambre; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                         </tr>
                                         <?php endforeach; ?>
 
                                     </tbody>
@@ -386,10 +293,7 @@ background-size: 10%;
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)" />
-                                    </svg></a>Résèrvations</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z" fill="rgba(78,115,223,1)"/></svg></a>Résèrvations</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -412,24 +316,18 @@ background-size: 10%;
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($data['reservation'] as $reservation) : ?>
+                                    <?php foreach ($data['reservation'] as $reservation) : ?>
 
-                                            <tr>
+                                        <tr>
 
                                                 <td><?php echo $reservation->ID_Reservation; ?></td>
                                                 <td><?php echo $reservation->ID_croisiere; ?></td>
                                                 <td><?php echo $reservation->date_reservation; ?></td>
                                                 <td><?php echo $reservation->Prix_reservation; ?></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/deleteReservation/<?php echo $reservation->ID_Reservation; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-                                                <td> <a href="<?php echo URLROOT; ?>/admin/editReservation/<?php echo $reservation->ID_Reservation; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                            <path fill="none" d="M0 0h24v24H0z" />
-                                                            <path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)" />
-                                                        </svg></a></td>
-
-                                            </tr>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/deleteReservation/<?php echo $reservation->ID_Reservation; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM4 18.385L5.763 17H20V5H4v13.385zM13.414 11l2.475 2.475-1.414 1.414L12 12.414 9.525 14.89l-1.414-1.414L10.586 11 8.11 8.525l1.414-1.414L12 9.586l2.475-2.475 1.414 1.414L13.414 11z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                <td> <a href="<?php echo URLROOT; ?>/articles/editReservation/<?php echo $reservation->ID_Reservation; ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z" fill="rgba(78,115,223,1)"/></svg></a></td>
+                                                                                  
+                                        </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
@@ -482,12 +380,7 @@ background-size: 10%;
             </div>
         </div>
     </div>
-    <script>
-    var loader = document.getElementById("preloader");
-    window.addEventListener("load",function(){
-        loader.style.display ="none";
-    })
-</script>
+
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo URLROOT; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

@@ -34,16 +34,22 @@ class Pages extends Controller{
      }
      public function croisieres($Nom_port = "")
      {
+        $ports = $this->PortsModel->getPorts();
 
         if($Nom_port == "" ){
             $Croisieres = $this->CroisiereModel->getCroisieres();
+            $portsc = $this->PortsModel->gettrajet();
         }else {
             $Croisieres = $this->CroisiereModel->getCroisiereByPort($Nom_port);
-        }
-      
+            $portsc = $this->PortsModel->gettrajet();
+                }
          $data = [
              'Croisieres' => $Croisieres,
+             'portsc'=> $portsc,
+             'ports' =>$ports,
          ];
+        //  die(print_r($data['portsc'][0]->Nom_navire));
+
          $this->view('pages/croisieres', $data);
      }
      public function croisieresdate($Date_dep = "")
@@ -51,12 +57,18 @@ class Pages extends Controller{
 
         if($Date_dep == "" ){
             $Croisieres = $this->CroisiereModel->getCroisieres();
+            $portsc = $this->PortsModel->gettrajet();
+
         }else {
             $Croisieres = $this->CroisiereModel->getCroisiereBydate($Date_dep);
+            $portsc = $this->PortsModel->gettrajet();
+
         }
       
          $data = [
              'Croisieres' => $Croisieres,
+             'portsc'=> $portsc,
+
          ];
          $this->view('pages/croisieres', $data);
      }
@@ -65,12 +77,18 @@ class Pages extends Controller{
 
         if($nom_navire == "" ){
             $Croisieres = $this->CroisiereModel->getCroisieres();
+            $portsc = $this->PortsModel->gettrajet();
+
         }else {
             $Croisieres = $this->CroisiereModel->getCroisiereBynavire($nom_navire);
+            $portsc = $this->PortsModel->gettrajet();
+
         }
       
          $data = [
              'Croisieres' => $Croisieres,
+             'portsc'=> $portsc,
+
          ];
          $this->view('pages/croisieres', $data);
      }
@@ -109,8 +127,12 @@ class Pages extends Controller{
         $croisierePerPage = 3;
         $offset = $croisierePerPage*($page - 1);
         $Croisieres  = $this->CroisiereModel->getCroisierePaginated($offset, $croisierePerPage);
+        $portsc = $this->PortsModel->gettrajet();
+
         $data = [
-            'Croisieres' => $Croisieres
+            'Croisieres' => $Croisieres,
+            'portsc'=> $portsc,
+
         ];
         $this->view('pages/croisieres', $data);
 

@@ -12,6 +12,14 @@ class Ports
         $results = $this->db->resultSet();
         return $results;
     }
+    public function gettrajet()
+    {
+        $this->db->query('SELECT * FROM trajetcts t , croisiere c,port p WHERE t.id_croisiere = c.ID_croisiere && t.id_port=p.ID_port;');
+       
+
+        $results = $this->db->resultSet();
+        return $results;
+    }
     public function  addport($data)
     {
         $this->db->query('INSERT INTO  port(ID_user,Nom_port,Pays,image) VALUES (:ID_user,:Nom_port,:Pays,:image) ');
